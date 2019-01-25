@@ -1,13 +1,20 @@
-function getNumber() {
-
-    var age = document.getElementById('age').value;
-
-    // si age est superieur ou égal à 18 on affiche "vous etes majeur"
-    if (age >= 18) {
-
-      alert(" Vous êtes majeur ");
-    // sinon si ce n'est pas le cas on affiche "vous etes mineur"
+//Je déclare ma fonction
+function getSee(){
+  var age = document.getElementById('age').value;
+//Je vérifie que l'âge est écrit en chiffres
+  if(isNaN(age) == false){
+    //Je vérifie que l'âge est infèrieur à 114 et supérieur à 0
+    if ( age < 114 && age > 0) {
+      // Vérifie la majorité
+      if (age >= 18){
+        alert('Vous êtes majeur');
+      }else{
+        alert('Vous êtes mineur');
+      }
     }else {
-      alert(" Vous êtes mineur ");
+      alert('Age non valide');
     }
+  }else{
+    alert('En nombres stp');
+  }
 }
